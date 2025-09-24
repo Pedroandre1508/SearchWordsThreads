@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
     }
     
     // ═══ BUSCA PARALELA ═══
-    printf("┌─ FASE 2: BUSCA PARALELA ───────────────────────────────────────────────┐\n");
+    printf("┌─ BUSCA PARALELA ───────────────────────────────────────────────┐\n");
     printf("│ Criando %d threads...\n", dados.num_palavras);
     
     pthread_t threads[MAX_WORDS];
@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
     printf("└─ Busca paralela concluída ─────────────────────────────────────────────┘\n\n");
     
     // ═══ GERAÇÃO DE RESULTADOS ═══
-    printf("┌─ FASE 3: GERAÇÃO DE RESULTADOS ────────────────────────────────────────┐\n");
+    printf("┌─ GERAÇÃO DE RESULTADOS ────────────────────────────────────────┐\n");
     escrever_arquivo_saida(argv[2], &dados);
     printf("└─ Arquivo de saída gerado ──────────────────────────────────────────────┘\n");
     
@@ -84,7 +84,10 @@ int main(int argc, char *argv[]) {
     printf("\n┌─ FINALIZANDO ───────────────────────────────────────────────────────────┐\n");
     liberar_memoria(&dados);
     finalizar_threading();
+    printf("    Pedro André e Rafael \n");
+
     printf("└─ Programa finalizado com sucesso ──────────────────────────────────────┘\n");
+
     
     return 0;
 }
